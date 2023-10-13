@@ -1,0 +1,17 @@
+.arial {
+	font-family: Arial, sans-serif;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.font700 {
+	font-weight: 700;
+}
+
+.colored {
+	color: red;
+	color: #00ff00;
+	color: rgb(0, 0, 255, 1.0);
+}
