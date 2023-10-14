@@ -17,7 +17,37 @@
 }
 
 .example-img {
-	display: block;
 	width: 100%;
-	max-width: 500px;
+	max-width: 50px;
+}
+
+.bgColor {
+	background-color: red;
+	border: 1px solid #000;
+	min-height: 50px;
+	margin: 5px;
+}
+
+.bgImageRep {
+	margin: 5px;
+	background: url('../img/img.png') 50% 50%/30px 30px;
+	min-height: 50px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+.bgImageNorep {
+	margin: 5px;
+	background: url('../img/img.png') 50% 50%/100% auto no-repeat;
+	min-height: 50px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+.list li {
+	overflow: ;
+	height: 20px;
+	padding: 0px 0px 0px 30px;
+	font-size: 20px;
+	background: url('../img/img.png') 0 50%/auto 20px no-repeat;
 }

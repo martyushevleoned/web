@@ -1,0 +1,37 @@
+* {
+	font-size: 20px;
+	text-align: justify;
+}
+
+body {
+	padding: 20px;
+}
+
+div.block {
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 0 0 20px;
+}
+
+p.text:first-line {
+	color: green;
+}
+
+p.text:first-letter {
+	font-size: 30px;
+}
+
+ul.list li:before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: blue;
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+ul.list li:hover:before {
+	background-color: green;
+}

@@ -1,0 +1,55 @@
+body {
+	padding: 10px;
+}
+
+div.block {
+	border: 1px solid #000;
+	border-radius: 5px;
+	margin: 10px 0px 10px;
+	padding: 5px;
+}
+
+.input {
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 40px;
+	width: 200px;
+}
+
+.input:focus {
+	border: 2px solid rgba(0, 0, 255, 0.4);
+	box-shadow: 0 0 5px rgba(0, 0, 255, 0.4);
+}
+
+.link:visited {
+	columns: green;
+}
+
+.link:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+.link:active {
+	color: blue;
+}
+
+ul.list li:first-child {
+	color: red;
+}
+
+ul.list li:nth-child(3) {
+	color: green;
+}
+
+ul.list li:nth-child(even) {
+	text-transform: uppercase;
+}
+
+ul.list li:last-child {
+	color: blue;
+}
+
+li:hover {
+	background-color: gray;
+}
