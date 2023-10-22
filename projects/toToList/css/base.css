@@ -1,9 +1,9 @@
 :root {
-  --bg-color: #EB9100;
-  --container-color: #7D4300;
-  --block-color: #9F9D82;
-  --part-color: #7CD882;
-  --hover-color: #EB9100;
+  --bg-color: #454545;
+  --container-color: #785964;
+  --block-color: #D5C7BC;
+  --part-color: #F1FFFA;
+  --hover-color: #93B7BE;
 }
 
 * {
@@ -11,7 +11,6 @@
 	font-size: 20px;
 	padding: 10px;
 	margin: 5px 5px 15px;
-	border: 1px solid black;
 	border-radius: 20px;
 }
 
@@ -27,6 +26,9 @@ body {
 	background-color: var(--bg-color);
 }
 
+div {
+	border: 1px solid black;
+}
 
 form {
 	padding: 0;
@@ -38,7 +40,6 @@ form {
 
 input {
 	border: 1px solid black;
-	border-radius: 20px;
 	background-color: var(--part-color);
 }
 
