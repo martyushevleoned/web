@@ -1,0 +1,16 @@
+* {
+	font-family: 'Arial';
+	font-size: 20px;
+	padding: 10px;
+	margin: 5px 5px 15px;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+
+:root {
+  --bg-color: #676767;
+  --container-color: #124310;
+  --block-color: #274380;
+  --part-color: #701070;
+  --hover-color: #115423;
+}
