@@ -1,39 +1,3 @@
-/*BASICS*/
-
-:root {
-  --container-color: #124310;
-  --block-color: #274380;
-  --part-color: #707070;
-}
-
-html {
-	margin: 0;
-	padding: 0;
-	border: none;
-	background-color: var(--bg-color);
-}
-
-body {
-	border: none;
-	background-color: var(--bg-color);
-}
-
-form {
-	padding: 0;
-	border: none;
-}
-
-input {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	background-color: var(--part-color);
-}
-
-input:hover {
-	background-color: var(--hover-color);
-}
-
 /*HEADER*/
 
 div.header {

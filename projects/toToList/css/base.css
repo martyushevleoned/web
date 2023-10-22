@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #EB9100;
+  --container-color: #7D4300;
+  --block-color: #9F9D82;
+  --part-color: #7CD882;
+  --hover-color: #EB9100;
+}
+
 * {
 	font-family: 'Arial';
 	font-size: 20px;
@@ -7,10 +15,33 @@
 	border-radius: 20px;
 }
 
-:root {
-  --bg-color: #676767;
-  --container-color: #124310;
-  --block-color: #274380;
-  --part-color: #701070;
-  --hover-color: #115423;
+html {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: var(--bg-color);
+}
+
+body {
+	border: none;
+	background-color: var(--bg-color);
+}
+
+
+form {
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	border: 1px solid black;
+	border-radius: 20px;
+	background-color: var(--part-color);
+}
+
+input:hover{
+	background-color: var(--hover-color);
 }
