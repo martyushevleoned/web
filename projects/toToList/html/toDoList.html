@@ -1,87 +1,55 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="../css/base.css">
-		<link rel="stylesheet" href="../css/toDoList.css">
-		<title>My ToDo List</title>
-	</head>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/projects.css">
+        <title>My ToDo List</title>
+    </head>
+    <body>
+          <div class="header">
+              <div class="header-content">
+                  <div class="content">
+                      <span>Hello,</span>
+                      <span th:text="${user.username}"></span>
+                  </div>
+                  <form th:fragment="logout" th:action="@{/logout}" method="post">
+                      <input type="submit" value="Sign out">
+                  </form>
+              </div>
+              <div class="header-content">
+                  <form th:action="@{/projects/add/project}" method="post">
+                      <input type="text" name="name" placeholder="project name" value="project name">
+                      <input type="submit" value="Add project">
+                  </form>
+              </div>
+          </div>
 
-	<body>
-		<div class="header">
-			<div class="header-content">
-				<div class="header-block">
-				    Hello, Username
-				</div>
-				<form action="#">
-					<input type="submit" value="Sign out">
-				</form>
-			</div>
-			<div class="header-content">
-                <form action="#">
-                	<input type="text" name="name" placeholder="project name" value="project name">
-                	<input type="submit" value="Add project">
-                </form>
-			</div>
-		</div>
-		<div class="wrapper">
-			<div class="project">
-				<div class="project-content">
-				    <div class="project-name">Some project</div>
-				</div>
-				<div class="project-content">
-				    <div class="task">
-				    	<div class="title">
-				    		Lorem, ipsum.
-				    	</div>
-				    	<div class="text">
-				    		Lorem ipsum dolor sit amet consectetur adipisicing.
-				    	</div>
-				    </div>
-				    <div class="task">
-				    	<div class="title">
-				    		Lorem, ipsum.
-				    	</div>
-				    	<div class="text">
-				    		Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Doloremque iusto laborum est dolor veniam.
-				    	</div>
-				    </div>
-				    <div class="task">
-				    	<div class="title">
-				    		Lorem, ipsum.
-				    	</div>
-				    	<div class="text">
-				    		Lorem ipsum dolor sit amet consectetur adipisicing.
-				    	</div>
-				    </div>
-				    <div class="task">
-				    	<div class="title">
-				    		Lorem, ipsum.
-				    	</div>
-				    	<div class="text">
-				    		Lorem ipsum dolor sit amet consectetur adipisicing.
-				    	</div>
-				    </div>
-				    <div class="task">
-				    	<div class="title">
-				    		Lorem, ipsum.
-				    	</div>
-				    	<div class="text">
-				    		Lorem ipsum dolor sit amet consectetur adipisicing.
-				    	</div>
-				    </div>
+          <div class="project" th:each="project: ${user.projects}">
+              <div class="project-content">
+                  <div class="content">
+                  	<span th:text="${project.name}">project name</span>
+                  </div>
+              </div>
+              <div class="project-content">
+                  <div class="task" th:each="task: ${project.tasks}">
+                      <div class="title">
+                          <span th:text="${task.title}">task</span>
+                      </div>
+                      <div class="text">
+                          <span th:text="${task.text}">title</span>
+                      </div>
+                  </div>
+                  <!-- ADD TASK -->
+                  <div class="task">
+                      <form th:action="@{/projects/add/task}" method="post">
+                          <input type="hidden" name="id" th:value="${project.id}"/>
+                          <input type="text" name="title" placeholder="title" value="title">
+                          <input type="text" name="text" placeholder="description" value="description">
+                          <input type="submit" value="Commit">
+                      </form>
+                  </div>
+              </div>
+          </div>
 
-                    <!-- ADD TASK -->
-                   
-                   <div class="task">
-                        <form action="#">
-                        	<input type="text" name="title" placeholder="title" value="title">
-                        	<input type="text" name="text" placeholder="description" value="description">
-                        	<input type="submit" value="Commit">
-                        </form>
-                   </div>
-                    
-				</div>
-			</div>
-		</div>
-	</body>
+    </body>
 </html>

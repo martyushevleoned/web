@@ -1,5 +1,14 @@
-/*HEADER*/
+div.header, div.project {
+	background-color: var(--container-color);
+}
 
+div.header-content, div.project-content {
+	background-color: var(--block-color);
+}
+
+
+/*HEADER*/
+/*
 div.header {
 	background-color: var(--container-color);
 }
@@ -17,7 +26,7 @@ div.header-block {
 
 
 /*WRAPER*/
-
+/*
 div.wrapper {
 	background-color: var(--container-color);
 }
@@ -47,4 +56,4 @@ div.task {
 	flex-grow: 1;
 	flex-shrink: 1;
 	background-color: var(--part-color);
-}
+}*/
