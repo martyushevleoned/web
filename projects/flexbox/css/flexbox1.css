@@ -1,31 +1,7 @@
-body {
-	padding: 10px;
+div.header, div.project {
+	background-color: var(--container-color);
 }
 
-div {
-	margin-bottom: 10px;
-	padding: 10px;
-	border: 1px solid black;
-	border-radius: 10px;
-}
-
-div.block {
-	background-color: orange;
-}
-
-div.block-row {
-	background-color: darkcyan;
-	display: flex;
-	justify-content: space-around;
-	align-items: flex-start;
-	flex-wrap: wrap;
-}
-
-div.block-column {
-	width: 45%;
-	background-color: red;
-}
-
-div.block-item {
-	background-color: white;
+div.header-content, div.project-content {
+	background-color: var(--block-color);
 }

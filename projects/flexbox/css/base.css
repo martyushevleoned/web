@@ -1,0 +1,47 @@
+:root {
+  --bg-color: #454545;
+  --container-color: #785964;
+  --block-color: #D5C7BC;
+  --content-color: #F1FFFA;
+  --hover-color: #93B7BE;
+
+  --default-margin: 10px;
+  --default-padding: 10px;
+  --default-border-radius: 7px;
+}
+
+* {
+	font-family: 'Arial';
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+div {
+	margin: var(--default-margin);
+	padding: var(--default-padding);
+
+	border: 1px solid black;
+	border-radius: var(--default-border-radius);
+}
+
+html {
+	background-color: var(--bg-color);
+}
+
+body {
+	background-color: var(--bg-color);
+}
+
+input {
+	background-color: var(--content-color);
+}
+
+input:hover{
+	background-color: var(--hover-color);
+}
+
+.content{
+	background-color: var(--content-color);
+}
