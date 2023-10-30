@@ -1,0 +1,50 @@
+/*HEADER*/
+
+div.header {
+	background-color: var(--container-color);
+}
+
+div.header-content {
+	background-color: var(--block-color);
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+div.header-block {
+	background-color: var(--part-color);
+}
+
+
+/*WRAPER*/
+
+div.wrapper {
+	background-color: var(--container-color);
+}
+
+div.project {
+	background-color: var(--block-color);
+}
+
+div.project-content {
+	margin: 0;
+	padding: 0;
+	border: none;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+div.project-name {
+	flex-grow: 1;
+	background-color: var(--part-color);
+}
+
+div.task {
+	min-width: 20%;
+	max-width: 45%;
+	flex-basis: 200px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	background-color: var(--part-color);
+}

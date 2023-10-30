@@ -2,6 +2,37 @@ div.header, div.project {
 	background-color: var(--container-color);
 }
 
+<<<<<<< HEAD
 div.header-content, div.project-content {
 	background-color: var(--block-color);
+=======
+div {
+	margin: 5px 5px 10px;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+div.block {
+	background-color: orange;
+}
+
+div.block-row {
+	background-color: darkcyan;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+
+div.block-column {
+	max-width: 45%;
+	flex-basis: 200px;
+	flex-grow: 1;
+	background-color: red;
+}
+
+div.block-item {
+	background-color: white;
+>>>>>>> 565f77af671fdcf75e6166ceba07178002ebea13
 }
