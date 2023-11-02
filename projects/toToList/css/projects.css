@@ -6,8 +6,22 @@ div.header-content, div.project-content {
 	background-color: var(--block-color);
 }
 
-input {
-	text-indent: var(--default-padding);
-	height: calc(var(--font-size) + var(--default-padding) * 2);
-	width: 100%;
+div.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+div.header-content {
+	flex-grow: 1;
+}
+
+div.project-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+div.task {
+	flex-basis: 200px;
+	flex-grow: 1;
 }

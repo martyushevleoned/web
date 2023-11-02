@@ -36,6 +36,12 @@ body {
 	background-color: var(--bg-color);
 }
 
+input {
+	text-indent: var(--default-padding);
+	height: calc(var(--font-size) + var(--default-padding) * 2);
+	width: 100%;
+}
+
 input:hover{
 	background-color: var(--hover-color);
 }

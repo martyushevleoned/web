@@ -8,6 +8,16 @@
     <body>
         <div class="header">
             <div class="header-content">
+                <form th:action="@{/projects/add/project}" method="post">
+                    <div class="content no-padding">
+                        <input type="text" name="name" placeholder="project name" value="project name">
+                    </div>
+                    <div class="content no-padding">
+                        <input type="submit" value="Add project">
+                    </div>
+                </form>
+            </div>
+            <div class="header-content">
                 <div class="content">
                     <span>Hello,</span>
                     <span th:text="${user.username}"></span>
@@ -15,16 +25,6 @@
                 <form th:fragment="logout" th:action="@{/logout}" method="post">
                     <div class="content no-padding">
                         <input type="submit" value="Sign out">    
-                    </div>
-                </form>
-            </div>
-            <div class="header-content">
-                <form th:action="@{/projects/add/project}" method="post">
-                    <div class="content no-padding">
-                        <input type="text" name="name" placeholder="project name" value="project name">
-                    </div>
-                    <div class="content no-padding">
-                        <input type="submit" value="Add project">
                     </div>
                 </form>
             </div>
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="project-content">
-                <div class="content" th:each="task: ${project.tasks}">
+                <div class="task content" th:each="task: ${project.tasks}">
                     <div>
                         <span th:text="${task.title}">task</span>
                     </div>
@@ -46,7 +46,7 @@
                   </div>
                 </div>
                 <!-- ADD TASK -->
-                <div class="content">
+                <div class="task content">
                     <form th:action="@{/projects/add/task}" method="post">
                         <input type="hidden" name="id" th:value="${project.id}"/>
                         <div class="no-padding">
