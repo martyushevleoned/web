@@ -38,8 +38,9 @@ body {
 
 input {
 	text-align: center;
-	height: calc(var(--font-size) + var(--default-padding) * 2);
 	width: 100%;
+	height: calc(var(--font-size) + var(--default-padding) * 2);
+	background-color: var(--content-color);
 }
 
 input:hover{

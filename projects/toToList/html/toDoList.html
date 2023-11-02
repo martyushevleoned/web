@@ -6,73 +6,78 @@
         <title>My ToDo List</title>
     </head>
     <body>
-        <div class="header">
-            <div class="header-content">
-                <form th:action="@{/projects/add/project}" method="post">
-                    <div class="content no-padding">
-                        <input type="text" name="name" placeholder="project name" value="project name">
-                    </div>
-                    <div class="content no-padding">
-                        <input type="submit" value="Add project">
-                    </div>
-                </form>
-            </div>
-            <div class="header-content">
-                <div class="content">
-                    <span>Hello,</span>
-                    <span th:text="${user.username}"></span>
+    <div class="header">
+        <div class="header-content">
+            <form th:action="@{/projects/add/project}" method="post">
+                <div class="content no-padding">
+                    <input type="text" name="name" placeholder="project name" value="project name">
                 </div>
-                <form th:fragment="logout" th:action="@{/logout}" method="post">
-                    <div class="content no-padding">
-                        <input type="submit" value="Sign out">    
-                    </div>
-                </form>
-            </div>
+                <div class="content no-padding">
+                    <input type="submit" value="Add project">
+                </div>
+            </form>
         </div>
+        <div class="header-content">
+            <div class="content">
+                <span>Hello,</span>
+                <span th:text="${user.username}"></span>
+            </div>
+            <form th:action="@{/home}" method="get">
+                <div class="content no-padding">
+                    <input type="submit" value="home">
+                </div>
+            </form>
+            <form th:fragment="logout" th:action="@{/logout}" method="post">
+                <div class="content no-padding">
+                    <input type="submit" value="Sign out">
+                </div>
+            </form>
+        </div>
+    </div>
 
-        <div class="project" th:each="project: ${user.projects}">
-            <div class="project-content">
-                <div class="content">
-              	    <span th:text="${project.name}">project name</span>
+    <div class="project" th:each="project: ${user.projects}">
+        <div class="project-content">
+            <div class="content">
+                <span th:text="${project.name}">project name</span>
+            </div>
+            <form th:action="@{/projects/delete/project}" method="post">
+                <input type="hidden" name="projectId" th:value="${project.id}"/>
+                <div class="content no-padding">
+                    <input type="submit" value="  Delete  ">
                 </div>
-                <form th:action="" method="post">
-                    <input type="hidden" name="id" th:value="${project.id}"/>
+            </form>
+        </div>
+        <div class="project-content">
+            <div class="task content" th:each="task: ${project.tasks}">
+                <div>
+                    <span th:text="${task.title}">task</span>
+                </div>
+                <div>
+                    <span th:text="${task.text}">title</span>
+                </div>
+                <form th:action="@{/projects/delete/task}" method="post">
+                    <input type="hidden" name="taskId" th:value="${task.id}"/>
                     <div class="content no-padding">
-                        <input type="submit" value="Delete">    
+                        <input type="submit" value="Delete">
                     </div>
                 </form>
             </div>
-            <div class="project-content">
-                <div class="task content" th:each="task: ${project.tasks}">
-                    <div>
-                        <span th:text="${task.title}">task</span>
+            <!-- ADD TASK -->
+            <div class="task content">
+                <form th:action="@{/projects/add/task}" method="post">
+                    <input type="hidden" name="id" th:value="${project.id}"/>
+                    <div class="no-padding">
+                        <input type="text" name="title" placeholder="title" value="title">
                     </div>
-                    <div>
-                      <span th:text="${task.text}">title</span>
+                    <div class="no-padding">
+                        <input type="text" name="text" placeholder="description" value="description">
                     </div>
-                    <form th:action="" method="post">
-                        <input type="hidden" name="id" th:value="${task.id}"/>
-                        <div class="content no-padding">
-                            <input type="submit" value="Delete">    
-                        </div>
-                    </form>
-                </div>
-                <!-- ADD TASK -->
-                <div class="task content">
-                    <form th:action="@{/projects/add/task}" method="post">
-                        <input type="hidden" name="id" th:value="${project.id}"/>
-                        <div class="no-padding">
-                            <input type="text" name="title" placeholder="title" value="title">
-                        </div>
-                        <div class="no-padding">
-                            <input type="text" name="text" placeholder="description" value="description">
-                        </div>
-                        <div class="no-padding">
-                            <input type="submit" value="Commit">
-                        </div>
-                    </form>
-                </div>
+                    <div class="no-padding">
+                        <input type="submit" value="Commit">
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
     </body>
 </html>
