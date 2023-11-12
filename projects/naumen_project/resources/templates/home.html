@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/wrapper.css">
+    <title>My ToDo List</title>
+</head>
+<body>
+<div class="wrapper">
+    <form th:action="@{/projects}" method="get">
+        <div class="no-padding">
+            <input type="submit" value="My Projects">
+        </div>
+    </form>
+</div>
+</body>
+</html>
